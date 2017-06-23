@@ -66,21 +66,21 @@
 		<button class="accordion">Global Function</button>
 			<div class="panel">
 				<div class="btn-group-vertical">
-				<label ng-repeat="dept in deptList" class="btn btn-primary">{{dept.prefDesc}}</label>
+				<label ng-repeat="gf in globalfunctions" class="btn btn-primary">{{gf.prefDesc}}</label>
 				</div>
 			</div>
         
-		<button class="accordion">Global Function</button>
+		<button class="accordion">Global Business</button>
 			<div class="panel">
 				<div class="btn-group-vertical">
-				<label ng-repeat="dept in deptList" class="btn btn-primary">{{dept.prefDesc}}</label>
+				<label ng-repeat="gb in globalbusiness" class="btn btn-primary">{{gb.prefDesc}}</label>
 				</div>
 			</div>
         
-		<button class="accordion">Global Function</button>
+		<button class="accordion">Host</button>
 			<div class="panel">
 				<div class="btn-group-vertical">
-				<label ng-repeat="dept in deptList" class="btn btn-primary">{{dept.prefDesc}}</label>
+				<label ng-repeat="ht in host" class="btn btn-primary">{{ht.prefDesc}}</label>
 				</div>
 			</div>
 
@@ -102,18 +102,43 @@
 
 				var app = angular.module('myApp', []);
 				app.controller('myCtrl', function($scope) {
-					$scope.deptList = [{
-						"prefDesc": "COO Office"
+					$scope.globalfunctions = [{
+						"prefDesc": "COMPANY SECRETARY"
 					}, {
-						"prefDesc": "Corporate Real Estate"
+						"prefDesc": "CORPORATE SUSTAINABILITY"
 					}, {
-						"prefDesc": "Operations"
+						"prefDesc": "FINANCE"
 					}, {
-						"prefDesc": "Procurement"
+						"prefDesc": "FINANCIAL CRIME RISK"
 					}, {
-						"prefDesc": "Technology"
+						"prefDesc": "GLOBAL COMMUNICATIONS"
+					}, {
+						"prefDesc": "HUMAN RESOURCES"
+					}, {
+						"prefDesc": "LEGAL"
 					}
 					];
+
+					$scope.globalbusiness = [{
+						"prefDesc": "COMMERCIAL BANKING"
+					}, {
+						"prefDesc": "GLOBAL BANKING AND MARKETS"
+					}, {
+						"prefDesc": "GLOBAL PRIVATE BANKING"
+					}, {
+						"prefDesc": "RETAIL BANKING AND HEALTH MANAGEMENT"
+					}
+					];
+
+					$scope.host = [{
+						"prefDesc": "CORPORATE REAL ESTATE"
+					}, {
+						"prefDesc": "OPERATIONS"
+					}, {
+						"prefDesc": "PROCUREMENT"
+					}
+					];
+
 				});
 			</script>
 
